@@ -218,6 +218,8 @@ function applyLanguage(lang) {
     btn.setAttribute('aria-pressed', active ? 'true' : 'false');
   }
 
+  syncLanguageQuery(lang);
+
   try {
     localStorage.setItem('ic-privacy-lang', lang);
   } catch {
@@ -225,13 +227,33 @@ function applyLanguage(lang) {
   }
 }
 
+function syncLanguageQuery(lang) {
+  const url = new URL(window.location.href);
+  if (url.searchParams.get('lang') === lang) {
+    return;
+  }
+  url.searchParams.set('lang', lang);
+  history.replaceState({ lang }, '', url);
+}
+
+function languageFromQuery() {
+  const value = new URLSearchParams(window.location.search).get('lang');
+  if (!value) return null;
+  const normalized = value.toLowerCase();
+  return translations[normalized] ? normalized : null;
+}
+
 function detectLanguage() {
+  const fromQuery = languageFromQuery();
+  if (fromQuery) return fromQuery;
+
   try {
     const saved = localStorage.getItem('ic-privacy-lang');
     if (saved && translations[saved]) return saved;
   } catch {
     // ignore
   }
+
   const nav = (navigator.language || 'en').toLowerCase();
   if (nav.startsWith('ru')) return 'ru';
   if (nav.startsWith('de')) return 'de';
@@ -243,6 +265,10 @@ document.querySelectorAll('.lang-btn').forEach((btn) => {
     const lang = btn.getAttribute('data-lang') || 'en';
     applyLanguage(lang);
   });
+});
+
+window.addEventListener('popstate', () => {
+  applyLanguage(detectLanguage());
 });
 
 applyLanguage(detectLanguage());
