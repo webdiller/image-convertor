@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Image Converter</title>
+    <meta
+      name="description"
+      content="Privacy Policy for the Image Converter browser extension. Local image conversion without uploading files to a server."
+    />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <div class="brand">
+          <img src="favicon.png" width="40" height="40" alt="" />
+          <div>
+            <p class="brand-name">Image Converter</p>
+            <p class="brand-sub" data-i18n="brandSub">Privacy Policy</p>
+          </div>
+        </div>
+        <nav class="lang-switch" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">
+            EN
+          </button>
+          <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
+          <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <article class="card">
+        <p class="meta"><span data-i18n="updated">Last updated:</span> <time datetime="2026-09-16">2026-09-16</time></p>
+        <h1 data-i18n="title">Privacy Policy</h1>
+        <p class="lead" data-i18n="lead">
+          This Privacy Policy explains how the Image Converter browser extension (“the Extension”)
+          handles information when you use it.
+        </p>
+
+        <section>
+          <h2 data-i18n="s1Title">1. Who we are</h2>
+          <p data-i18n="s1Body">
+            Image Converter is a browser extension that converts and edits images locally in your
+            browser. Contact:
+            <a href="mailto:eugenefromrus@gmail.com">eugenefromrus@gmail.com</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 data-i18n="s2Title">2. Summary</h2>
+          <ul>
+            <li data-i18n="s2Li1">
+              Image conversion and editing run on your device. Files are not uploaded to our servers.
+            </li>
+            <li data-i18n="s2Li2">
+              We do not operate a backend that receives your images for processing.
+            </li>
+            <li data-i18n="s2Li3">
+              Preferences and a temporary work session may be stored locally in the browser.
+            </li>
+            <li data-i18n="s2Li4">We do not sell personal data.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 data-i18n="s3Title">3. Data we process</h2>
+          <h3 data-i18n="s3aTitle">3.1 Images you choose to convert</h3>
+          <p data-i18n="s3aBody">
+            When you select images (file picker, drag-and-drop, or context menu on a page image),
+            those files are processed locally for conversion, resize, rotation, format change, and
+            preview. Processed results stay on your device unless you download or share them yourself.
+          </p>
+          <h3 data-i18n="s3bTitle">3.2 Local settings and session</h3>
+          <p data-i18n="s3bBody">
+            The Extension may store settings such as language, output format, quality, processing
+            mode, and download behavior using browser storage APIs. It may also keep a temporary local
+            work session (source and result image data in IndexedDB, up to a size limit) so your queue
+            can be restored if the popup closes. This data remains in your browser profile.
+          </p>
+          <h3 data-i18n="s3cTitle">3.3 What we do not collect</h3>
+          <p data-i18n="s3cBody">
+            The Extension does not create user accounts, and it does not intentionally collect your
+            name, payment details, precise location, or browsing history for analytics or advertising.
+            We do not use third-party analytics SDKs in the Extension for this purpose.
+          </p>
+        </section>
+
+        <section>
+          <h2 data-i18n="s4Title">4. Permissions and why they are used</h2>
+          <ul>
+            <li data-i18n="s4Li1">
+              <strong>storage</strong> — save preferences and a temporary local work session.
+            </li>
+            <li data-i18n="s4Li2">
+              <strong>contextMenus</strong> — add a right-click action on images to open them in the
+              converter.
+            </li>
+            <li data-i18n="s4Li3">
+              <strong>activeTab</strong> — work with the active tab when you start conversion from the
+              page context.
+            </li>
+            <li data-i18n="s4Li4">
+              <strong>scripting</strong> — limited fallback to obtain an image from the page when
+              converting via the context menu (for example if a direct URL fetch is blocked).
+            </li>
+            <li data-i18n="s4Li5">
+              <strong>Host access (http/https)</strong> — fetch the image URL you selected via the
+              context menu so it can be converted locally. This is not used to scrape pages or sell
+              browsing data.
+            </li>
+          </ul>
+          <p data-i18n="s4Note">
+            The Extension packages its scripts and WebAssembly codecs with the install. It does not
+            execute remote code downloaded from arbitrary websites as application logic.
+          </p>
+        </section>
+
+        <section>
+          <h2 data-i18n="s5Title">5. Sharing and third parties</h2>
+          <p data-i18n="s5Body">
+            We do not sell your images or personal information. Images are not sent to our servers for
+            conversion. Browser vendors (for example Google Chrome) may process extension install and
+            update data under their own policies when you use their store and browser.
+          </p>
+        </section>
+
+        <section>
+          <h2 data-i18n="s6Title">6. Retention</h2>
+          <p data-i18n="s6Body">
+            Local settings remain until you clear extension data or uninstall the Extension. Temporary
+            work-session images are kept only for local restore and may expire or be cleared when you
+            empty the queue. Compare sessions used for side-by-side preview are temporary.
+          </p>
+        </section>
+
+        <section>
+          <h2 data-i18n="s7Title">7. Your choices</h2>
+          <ul>
+            <li data-i18n="s7Li1">Clear the file queue inside the Extension.</li>
+            <li data-i18n="s7Li2">
+              Remove extension storage via browser settings, or uninstall the Extension.
+            </li>
+            <li data-i18n="s7Li3">
+              Contact us at
+              <a href="mailto:eugenefromrus@gmail.com">eugenefromrus@gmail.com</a> with privacy
+              questions.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 data-i18n="s8Title">8. Children’s privacy</h2>
+          <p data-i18n="s8Body">
+            The Extension is not directed at children under 13, and we do not knowingly collect
+            personal information from children.
+          </p>
+        </section>
+
+        <section>
+          <h2 data-i18n="s9Title">9. Changes</h2>
+          <p data-i18n="s9Body">
+            We may update this Privacy Policy from time to time. The “Last updated” date at the top
+            will change when we do. Continued use of the Extension after an update means you accept
+            the revised policy.
+          </p>
+        </section>
+
+        <section>
+          <h2 data-i18n="s10Title">10. Contact</h2>
+          <p data-i18n="s10Body">
+            Questions about this Privacy Policy:
+            <a href="mailto:eugenefromrus@gmail.com">eugenefromrus@gmail.com</a>.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p data-i18n="footer">© Image Converter. All processing described here is designed to stay on your device.</p>
+      </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+  </body>
+</html>
