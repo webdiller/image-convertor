@@ -26,15 +26,17 @@ const translations = {
     s3cBody:
       'The Extension does not create user accounts, and it does not intentionally collect your name, payment details, precise location, or browsing history for analytics or advertising. We do not use third-party analytics SDKs in the Extension for this purpose.',
     s4Title: '4. Permissions and why they are used',
-    s4Li1: 'storage — save preferences and a temporary local work session.',
+    s4Li1: 'storage - save preferences and a temporary local work session.',
     s4Li2:
-      'contextMenus — add a right-click action on images to open them in the converter.',
+      'contextMenus - right-click menu on images with output format options (PNG, JPEG, WebP, AVIF) to open the converter with preselected settings.',
     s4Li3:
-      'activeTab — work with the active tab when you start conversion from the page context.',
+      'activeTab - work with the active tab when you start conversion from the page context.',
     s4Li4:
-      'scripting — limited fallback to obtain an image from the page when converting via the context menu (for example if a direct URL fetch is blocked).',
+      'scripting - limited fallback to obtain an image from the page when converting via the context menu (for example if a direct URL fetch is blocked).',
     s4Li5:
-      'Host access (http/https) — fetch the image URL you selected via the context menu so it can be converted locally. This is not used to scrape pages or sell browsing data.',
+      'Host access (http/https) - fetch the image URL you selected via the context menu so it can be converted locally. This is not used to scrape pages or sell browsing data.',
+    s4Li6:
+      'downloads - save converted images to your Downloads folder (including an optional ImageConverter subfolder or a single ZIP archive). Files are not sent to our servers.',
     s4Note:
       'The Extension packages its scripts and WebAssembly codecs with the install. It does not execute remote code downloaded from arbitrary websites as application logic.',
     s5Title: '5. Sharing and third parties',
@@ -66,7 +68,7 @@ const translations = {
       'Эта Политика конфиденциальности объясняет, как расширение Image Converter («Расширение») обрабатывает информацию при использовании.',
     s1Title: '1. Кто мы',
     s1Body:
-      'Image Converter — браузерное расширение для локальной конвертации и редактирования изображений. Контакт: eugenefromrus@gmail.com.',
+      'Image Converter - браузерное расширение для локальной конвертации и редактирования изображений. Контакт: eugenefromrus@gmail.com.',
     s2Title: '2. Кратко',
     s2Li1:
       'Конвертация и редактирование выполняются на вашем устройстве. Файлы не загружаются на наши серверы.',
@@ -85,15 +87,17 @@ const translations = {
     s3cBody:
       'Расширение не создаёт аккаунты и намеренно не собирает имя, платёжные данные, точную геолокацию или историю браузинга для аналитики или рекламы. Сторонние analytics SDK для этих целей не используются.',
     s4Title: '4. Разрешения и зачем они нужны',
-    s4Li1: 'storage — сохранение настроек и временной локальной сессии.',
+    s4Li1: 'storage - сохранение настроек и временной локальной сессии.',
     s4Li2:
-      'contextMenus — пункт в контекстном меню по изображениям для открытия в конвертере.',
+      'contextMenus - контекстное меню по изображениям с выбором формата (PNG, JPEG, WebP, AVIF) для открытия конвертера с предвыбранными настройками.',
     s4Li3:
-      'activeTab — работа с активной вкладкой при запуске конвертации со страницы.',
+      'activeTab - работа с активной вкладкой при запуске конвертации со страницы.',
     s4Li4:
-      'scripting — ограниченный запасной способ получить изображение со страницы через контекстное меню (например, если прямой fetch URL заблокирован).',
+      'scripting - ограниченный запасной способ получить изображение со страницы через контекстное меню (например, если прямой fetch URL заблокирован).',
     s4Li5:
-      'Доступ к хостам (http/https) — загрузка URL изображения, выбранного через контекстное меню, для локальной конвертации. Не используется для сбора страниц или продажи данных о браузинге.',
+      'Доступ к хостам (http/https) - загрузка URL изображения, выбранного через контекстное меню, для локальной конвертации. Не используется для сбора страниц или продажи данных о браузинге.',
+    s4Li6:
+      'downloads - сохранение результатов в папку «Загрузки» (в том числе в подпапку ImageConverter или одним ZIP-архивом). Файлы не отправляются на наши серверы.',
     s4Note:
       'Скрипты и WebAssembly-кодеки поставляются вместе с установкой. Расширение не выполняет удалённый код с произвольных сайтов как логику приложения.',
     s5Title: '5. Передача третьим лицам',
@@ -145,15 +149,17 @@ const translations = {
     s3cBody:
       'Die Erweiterung erstellt keine Benutzerkonten und erhebt absichtlich keine Namen, Zahlungsdaten, präzisen Standort oder Browserverlauf für Analytics oder Werbung. Es werden keine Drittanbieter-Analytics-SDKs zu diesem Zweck verwendet.',
     s4Title: '4. Berechtigungen und Zweck',
-    s4Li1: 'storage — Speichern von Einstellungen und einer temporären lokalen Sitzung.',
+    s4Li1: 'storage - Speichern von Einstellungen und einer temporären lokalen Sitzung.',
     s4Li2:
-      'contextMenus — Rechtsklick-Aktion auf Bildern, um sie im Konverter zu öffnen.',
+      'contextMenus - Kontextmenü auf Bildern mit Ausgabeformat-Optionen (PNG, JPEG, WebP, AVIF), um den Konverter mit vorausgewählten Einstellungen zu öffnen.',
     s4Li3:
-      'activeTab — Arbeit mit dem aktiven Tab, wenn Sie die Konvertierung aus dem Seitenkontext starten.',
+      'activeTab - Arbeit mit dem aktiven Tab, wenn Sie die Konvertierung aus dem Seitenkontext starten.',
     s4Li4:
-      'scripting — begrenzter Fallback, um ein Bild von der Seite über das Kontextmenü zu erhalten (z. B. wenn ein direkter URL-Abruf blockiert ist).',
+      'scripting - begrenzter Fallback, um ein Bild von der Seite über das Kontextmenü zu erhalten (z. B. wenn ein direkter URL-Abruf blockiert ist).',
     s4Li5:
-      'Host-Zugriff (http/https) — Abruf der per Kontextmenü gewählten Bild-URL zur lokalen Konvertierung. Nicht zum Scrapen von Seiten oder Verkauf von Browserdaten.',
+      'Host-Zugriff (http/https) - Abruf der per Kontextmenü gewählten Bild-URL zur lokalen Konvertierung. Nicht zum Scrapen von Seiten oder Verkauf von Browserdaten.',
+    s4Li6:
+      'downloads - Speichern konvertierter Bilder im Download-Ordner (optional im Unterordner ImageConverter oder als ZIP-Archiv). Dateien werden nicht an unsere Server gesendet.',
     s4Note:
       'Skripte und WebAssembly-Codecs werden mit der Installation ausgeliefert. Die Erweiterung führt keinen Remote-Code von beliebigen Websites als Anwendungslogik aus.',
     s5Title: '5. Weitergabe und Dritte',
@@ -204,7 +210,7 @@ function applyLanguage(lang) {
       key.startsWith('s4Li')
     ) {
       el.innerHTML = withMailLinks(value).replace(
-        /^(storage|contextMenus|activeTab|scripting|Host access \(http\/https\)|Доступ к хостам \(http\/https\)|Host-Zugriff \(http\/https\))/,
+        /^(storage|contextMenus|activeTab|scripting|downloads|Host access \(http\/https\)|Доступ к хостам \(http\/https\)|Host-Zugriff \(http\/https\))/,
         '<strong>$1</strong>',
       );
     } else {
